@@ -69,45 +69,46 @@
 
   <img class="avatar" src="images/avatar.jpg" alt="avatar" />
 
-  <p
-    class="slide slide-1"
-    style={transition && "opacity: 1; transform: translateX(0);"}
-  >
-    I’m Leo, a software engineer with a focus on web development. I enjoy
-    turning ideas into applications, working front to back to create engaging,
-    responsive, and ultimately impactful digital experiences.
-  </p>
+  <div class="text">
+    <p
+      class="slide slide-1"
+      style={transition && "opacity: 1; transform: translateX(0);"}
+    >
+      I’m Leo, a software engineer with a focus on web development. I enjoy
+      turning ideas into applications, working front to back to create engaging,
+      responsive, and ultimately impactful digital experiences.
+    </p>
 
-  <p
-    class="slide slide-2"
-    style={transition && "opacity: 1; transform: translateX(0);"}
-  >
-    I'm fascinated by how vastly creative the world of programming is, and the
-    brilliant minds who leverage these tools and technologies to build new and
-    exciting experiences for users and fellow hackers. My dream is to explore as
-    much of this world as I can and leave an impression of my own one day.
-  </p>
-  <p
-    class="slide slide-3"
-    style={transition && "opacity: 1; transform: translateX(0);"}
-  >
-    Outside of computers, my hobbies include recreational volleyball, fantasy
-    fiction, metal concerts, and implementing depth-first algorithms on inverted
-    trees (a.k.a. rock climbing). My latest hobby is drumming. Reach out if you
-    want to start a band!
-  </p>
+    <p
+      class="slide slide-2"
+      style={transition && "opacity: 1; transform: translateX(0);"}
+    >
+      I'm fascinated by how vastly creative the world of programming is, and the
+      brilliant minds who leverage these tools and technologies to build new and
+      exciting experiences for users and fellow hackers. My dream is to explore
+      as much of this world as I can and leave an impression of my own one day.
+    </p>
+    <p
+      class="slide slide-3"
+      style={transition && "opacity: 1; transform: translateX(0);"}
+    >
+      Outside of computers, my hobbies include recreational volleyball, fantasy
+      fiction, metal concerts, and implementing depth-first algorithms on
+      inverted trees (a.k.a. rock climbing). My latest hobby is drumming. Reach
+      out if you want to start a band!
+    </p>
+  </div>
 </section>
 
 <style>
   section {
     height: 120vh;
-    overflow: hidden;
   }
 
   .container {
-    padding-top: 4rem;
+    padding-top: 6rem;
     display: block;
-    width: 100%;
+    width: 95%;
     cursor: pointer;
     height: 4rem;
   }
@@ -117,7 +118,7 @@
   }
 
   .heading:hover {
-    scale: 101%;
+    scale: 102%;
     transition: scale 0.2s ease-in-out;
   }
 
@@ -130,10 +131,13 @@
     border-radius: 100%;
   }
 
+  .text {
+    display: flex;
+    flex-direction: column;
+  }
+
   p {
     opacity: 0;
-    font-weight: 300;
-    font-size: 0.9rem;
     margin-bottom: 2rem;
   }
 
@@ -155,5 +159,23 @@
   .slide-3 {
     transform: translateX(-50%);
     transition: all 500ms ease-in 1s;
+  }
+
+  @media (min-width: 480px) {
+    .avatar {
+      width: 200px;
+      height: 200px;
+    }
+  }
+
+  @media (min-width: 960px) {
+    .avatar {
+      width: 300px;
+      height: 300px;
+    }
+
+    .container {
+      padding-bottom: 3rem;
+    }
   }
 </style>

@@ -10,12 +10,11 @@
 
   <div class="description">
     <div class="project-text">
-      <h2>{project.title}</h2>
+      <h3>{project.title}</h3>
       <p>{project.description}</p>
     </div>
 
     <div class="tools">
-      <h2>Tools</h2>
       <ul>
         {#each project.tools as tool}
           <li>{tool}</li>
@@ -45,19 +44,16 @@
 
   img {
     width: 100%;
-    max-height: 100%;
+    max-height: 200px;
     object-fit: contain;
   }
 
   p {
-    font-weight: 300;
-    font-size: 0.7rem;
     margin: 1rem 0;
   }
 
   .project-text {
     padding: 0.7rem;
-    width: 50%;
     background-color: #242d30;
   }
 
@@ -82,12 +78,11 @@
 
   .description {
     display: flex;
+    flex-direction: column;
     margin-top: -4px;
   }
 
   .tools {
-    /* border-left: 1px solid white; */
-    width: 50%;
     padding: 0.7rem;
     background-color: #334044;
   }
@@ -97,18 +92,47 @@
   }
 
   ul {
-    padding-left: 1rem;
-    margin: 1rem 0;
+    margin: 0.5rem 0;
+    display: flex;
+    justify-content: center;
   }
 
   li {
-    /* margin-right: 2rem; */
-    font-size: 0.7rem;
-    font-weight: 300;
-    list-style: disc;
+    list-style: none;
+    font-size: 0.6rem;
   }
 
-  /* li:first-child {
-    list-style: none;
-  } */
+  li:not(:first-child) {
+    margin-left: 0.7rem;
+  }
+
+  @media (min-width: 480px) {
+    .tools,
+    .project-text {
+      padding: 1rem;
+    }
+
+    li {
+      font-size: 0.9rem;
+    }
+  }
+
+  @media (min-width: 960px) {
+    .tools,
+    .project-text {
+      padding: 1.3rem;
+    }
+
+    li {
+      font-size: 1.2rem;
+    }
+
+    li:not(:first-child) {
+      margin-left: 1rem;
+    }
+
+    img {
+      max-height: 360px;
+    }
+  }
 </style>

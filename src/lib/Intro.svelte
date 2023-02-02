@@ -47,28 +47,17 @@
   }
 
   h1 {
-    font-weight: 500;
-    font-size: 3rem;
     color: #dbd8d8;
     margin-bottom: 1.6rem;
   }
 
   h2 {
-    font-weight: 500;
-    font-size: 2rem;
     color: #9ab4b9;
     margin-bottom: 0.5rem;
   }
 
   h3 {
-    font-weight: 500;
-    font-size: 1.5rem;
     margin-bottom: 0.5rem;
-  }
-
-  p {
-    font-weight: 300;
-    font-size: 0.9rem;
   }
 
   .arrow-container {
@@ -81,5 +70,20 @@
     left: 150px;
     top: -20px;
     width: 160px;
+  }
+
+  @media (min-width: 480px) {
+    .arrow {
+      width: 220px;
+      left: 220px;
+    }
+  }
+
+  @media (min-width: 960px) {
+    .arrow {
+      width: 300px;
+      left: 270px;
+      top: -30px;
+    }
   }
 </style>

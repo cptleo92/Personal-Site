@@ -25,13 +25,21 @@
     font-family: "Roboto Slab";
     font-style: normal;
     font-weight: 700;
-    font-size: 12px;
+    font-size: 1rem;
     text-align: center;
   }
 
   @media (min-width: 480px) {
     main {
-      margin: 1.5rem 4rem;
+      width: 400px;
+      margin: 1.5rem auto;
+    }
+  }
+
+  @media (min-width: 960px) {
+    main {
+      width: 720px;
+      margin: 2rem auto;
     }
   }
 </style>

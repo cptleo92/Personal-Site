@@ -84,7 +84,6 @@
   }
 
   p {
-    font-size: 0.8rem;
     margin: 0.5rem 1rem 2rem 0;
   }
 

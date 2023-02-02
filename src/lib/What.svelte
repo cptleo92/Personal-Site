@@ -86,7 +86,6 @@
 <style>
   section {
     height: 120vh;
-    /* position: relative; */
   }
 
   .container-container {
@@ -94,7 +93,7 @@
   }
 
   .heading {
-    padding-top: 4rem;
+    padding-top: 6rem;
     width: 100%;
     margin: 2rem 0;
   }
@@ -104,7 +103,7 @@
     width: 30px;
     color: #e5e5e5;
     cursor: pointer;
-    top: 180px;
+    top: 130px;
   }
 
   .icon-left {
@@ -124,11 +123,24 @@
     scale: 80%;
   }
 
-  /* .icon:first-child {
-    margin-right: 6rem;
-  } */
-
   .projects-container {
     position: absolute;
+  }
+
+  @media (min-width: 480px) {
+    .icon {
+      top: 230px;
+    }
+  }
+
+  @media (min-width: 960px) {
+    .icon {
+      top: 335px;
+    }
+
+    .projects-container {
+      width: 100%;
+      /* left: 50px; */
+    }
   }
 </style>
