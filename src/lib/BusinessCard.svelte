@@ -1,22 +1,18 @@
 <script>
-  import { tick } from "svelte";
   import { fly } from "svelte/transition";
   let showCard = false;
 
   const handleClick = () => {
-    if (showCard) {
-      showCard = false;
-    }
     showCard = true;
   };
 </script>
 
 {#if !showCard}
-  <button on:click={handleClick}>Take My Card</button>
+  <button in:fly={{ delay: 3500 }} on:click={handleClick}>Take My Card</button>
 {/if}
 
 {#if showCard}
-  <div class="card" in:fly={{ y: 100, duration: 1000 }}>
+  <div class="card" in:fly={{ y: 50, duration: 1000 }}>
     <img src="images/business.png" alt="business card" />
   </div>
 {/if}
@@ -24,7 +20,7 @@
 <style>
   button {
     display: block;
-    margin: 1.5rem auto;
+    margin: 2rem auto;
     min-width: 200px;
     height: 75px;
     background-color: transparent;

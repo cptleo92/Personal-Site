@@ -1,7 +1,7 @@
 <script>
   import { fly } from "svelte/transition";
 
-  let hideHeader = true;
+  let hideHeader = false;
 
   let y = 0;
   let lastY = 0;
@@ -38,8 +38,11 @@
 {#if !hideHeader}
   <header class="container" transition:fly={{ y: -50, duration: 400 }}>
     <button on:click={scrollIntoView} class="header-btn"> Who </button>
-    <button on:click={scrollIntoView} class="header-btn mid"> What </button>
+    <button on:click={scrollIntoView} class="header-btn"> What </button>
     <button on:click={scrollIntoView} class="header-btn"> Where </button>
+    <button class="header-btn"
+      ><a href="Leo_Cheng_SE_Resume.pdf">Resume</a></button
+    >
   </header>
 {/if}
 
@@ -49,14 +52,18 @@
     width: 100%;
     height: 50px;
     top: 0;
+    left: 0;
     display: flex;
     justify-content: center;
-    margin: 1rem auto;
+    margin: auto;
+    padding: 1rem 0;
+    margin-top: 0;
     z-index: 10;
+    backdrop-filter: blur(2px);
   }
 
   .header-btn {
-    width: 90px;
+    width: 75px;
     height: 40px;
     background: #cfc7bf;
     border-radius: 10px;
@@ -66,12 +73,12 @@
     cursor: pointer;
   }
 
+  .header-btn:not(:first-child) {
+    margin-left: 0.5rem;
+  }
+
   .header-btn:hover {
     scale: 105%;
     transition: scale 0.2s ease-out;
-  }
-
-  .mid {
-    margin: 0 20px;
   }
 </style>

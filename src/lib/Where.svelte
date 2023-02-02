@@ -15,8 +15,8 @@
 
   <h4>Please don't hesitate to reach out!</h4>
   <p>
-    Connect with me on LinkedIn or send me an email! I look forward to chatting
-    with you.
+    Connect with me on LinkedIn or send me an email! I'm open to all
+    opportunities, collaborations, and regular old chats.
   </p>
 
   <div class="icon-container">
@@ -51,6 +51,8 @@
       <MdEmail />
     </a>
   </div>
+
+  <button><a href="Leo_Cheng_SE_Resume.pdf">My Resume</a></button>
 </section>
 
 <style>
@@ -84,5 +86,31 @@
   p {
     font-size: 0.8rem;
     margin: 0.5rem 1rem 2rem 0;
+  }
+
+  button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1.5rem auto;
+    min-width: 160px;
+    height: 60px;
+    background-color: transparent;
+    border: 2px solid #ffffff;
+    border-radius: 15px;
+    color: white;
+    font-family: Roboto;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+
+  button:hover {
+    scale: 103%;
+    transition: scale 0.2s ease-out;
+  }
+
+  button:active {
+    scale: 95%;
+    transition: scale 0.2s ease-out;
   }
 </style>
