@@ -1,4 +1,5 @@
 <script>
+  import BusinessCard from "./BusinessCard.svelte";
 </script>
 
 <section>
@@ -15,37 +16,39 @@
     about trending technologies, experimenting with unfamiliar tools, and
     challenging myself by building outside of my comfort zone.
   </p>
+
+  <BusinessCard />
 </section>
 
 <style>
   section {
-    margin-top: 5rem;
-    padding-right: 2rem;
+    margin: 10rem auto;
+    height: 90vh;
   }
 
   h1 {
     font-weight: 500;
-    font-size: 36px;
+    font-size: 3rem;
     color: #dbd8d8;
     margin-bottom: 1.6rem;
   }
 
   h2 {
     font-weight: 500;
-    font-size: 24px;
+    font-size: 2rem;
     color: #9ab4b9;
     margin-bottom: 0.5rem;
   }
 
   h3 {
-    font-weight: 300;
-    font-size: 16px;
+    font-weight: 500;
+    font-size: 1.5rem;
     margin-bottom: 0.5rem;
   }
 
   p {
     font-weight: 300;
-    font-size: 11px;
+    font-size: 0.9rem;
   }
 
   .arrow-container {
