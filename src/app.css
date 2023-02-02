@@ -1,7 +1,10 @@
 body {
-  background-color: #065A82;
-  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  color: #CDD8E0;
-  font-size: 20px;
+  background-color: #18242F;
+  margin: 1.5rem 3rem;
+  font-family: 'Roboto';
+  color: white;
+}
+
+h1, h2, h3, h4, h5, h6, p {
   margin: 0;
 }
