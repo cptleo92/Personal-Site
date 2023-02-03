@@ -13,6 +13,7 @@
   <What />
   <Where />
 
+  <hr />
   <footer>© 2023 Leo Cheng | Designed by Leo Cheng</footer>
 </main>
 

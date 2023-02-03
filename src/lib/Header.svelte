@@ -39,8 +39,8 @@
   <header class="container" transition:fly={{ y: -50, duration: 400 }}>
     <button on:click={scrollIntoView} class="header-btn"> Who </button>
     <button on:click={scrollIntoView} class="header-btn"> What </button>
-    <button on:click={scrollIntoView} class="header-btn"> Where </button>
-    <button class="header-btn"
+    <button on:click={scrollIntoView} class="header-btn "> Where </button>
+    <button class="header-btn resume"
       ><a href="Leo_Cheng_SE_Resume.pdf">Resume</a></button
     >
   </header>
@@ -65,12 +65,18 @@
   .header-btn {
     width: 75px;
     height: 40px;
-    background: #cfc7bf;
-    border-radius: 10px;
+    background: #e4e4e4;
+    border-radius: 6px;
     font-weight: 500;
-    font-size: 1rem;
+    font-size: 0.9rem;
     font-family: Roboto;
     cursor: pointer;
+  }
+
+  .resume {
+    background: transparent;
+    color: white;
+    border: 2px solid white;
   }
 
   .header-btn:not(:first-child) {
@@ -80,5 +86,24 @@
   .header-btn:hover {
     scale: 105%;
     transition: scale 0.2s ease-out;
+  }
+
+  @media (min-width: 480px) {
+    .header-btn {
+      width: 90px;
+      font-size: 1rem;
+    }
+  }
+
+  @media (min-width: 960px) {
+    .container {
+      justify-content: right;
+    }
+
+    .header-btn {
+      margin-right: 1.5rem;
+      width: 120px;
+      font-size: 1.2rem;
+    }
   }
 </style>

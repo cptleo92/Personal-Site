@@ -94,8 +94,8 @@
 
   .heading {
     padding-top: 6rem;
-    width: 100%;
-    margin: 2rem 0;
+    width: 90%;
+    margin: 4rem 0;
   }
 
   .icon {

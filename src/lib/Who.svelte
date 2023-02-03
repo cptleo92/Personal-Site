@@ -27,6 +27,11 @@
     let section = document.querySelector(".who");
     observer.observe(section);
   });
+
+  let clicked = false;
+  const handleImgClick = () => {
+    clicked = !clicked;
+  };
 </script>
 
 <section class="who">
@@ -67,7 +72,13 @@
     {/if}
   </div>
 
-  <img class="avatar" src="images/avatar.jpg" alt="avatar" />
+  <img
+    on:click={handleImgClick}
+    style={`transform: rotateY(${clicked ? "180deg" : 0});`}
+    class="avatar"
+    src="images/avatar.jpg"
+    alt="avatar"
+  />
 
   <div class="text">
     <p
@@ -114,7 +125,7 @@
   }
 
   .heading {
-    width: 100%;
+    width: 90%;
   }
 
   .heading:hover {
@@ -129,6 +140,13 @@
     height: 168px;
     box-shadow: 1px 1px 8px #000000;
     border-radius: 100%;
+    cursor: pointer;
+    transition: all 0.5s ease-in;
+  }
+
+  .avatar:hover {
+    scale: 105%;
+    transition: scale 0.3s ease-in-out;
   }
 
   .text {

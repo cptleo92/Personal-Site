@@ -40,7 +40,7 @@
 
   .card img {
     display: block;
-    margin: 1.5rem auto;
+    margin: 3rem auto;
     width: 90%;
   }
 </style>

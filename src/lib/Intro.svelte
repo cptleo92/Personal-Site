@@ -31,9 +31,11 @@
       />
     </div>
     <p in:fade={{ easing: cubicOut, delay: 2000 }}>
-      I design, develop, and deploy full stack web applications. I love learning
-      about trending technologies, experimenting with unfamiliar tools, and
-      challenging myself by building outside of my comfort zone.
+      I design, develop, and deploy full stack web applications.
+    </p>
+    <p in:fade={{ easing: cubicOut, delay: 2000 }}>
+      I love learning about trending technologies, experimenting with unfamiliar
+      tools, and challenging myself by building outside of my comfort zone.
     </p>
 
     <BusinessCard />
@@ -48,12 +50,12 @@
 
   h1 {
     color: #dbd8d8;
-    margin-bottom: 1.6rem;
+    margin-bottom: 2rem;
   }
 
   h2 {
     color: #9ab4b9;
-    margin-bottom: 0.5rem;
+    margin-bottom: 2rem;
   }
 
   h3 {

@@ -13,52 +13,59 @@
     alt="where to find me"
   />
 
-  <h4>Please don't hesitate to reach out!</h4>
-  <p>
-    Connect with me on LinkedIn or send me an email! I'm open to all
-    opportunities, collaborations, and regular old chats.
-  </p>
+  <div class="box">
+    <h3>Please don't hesitate to reach out!</h3>
+    <p>
+      Connect with me on LinkedIn or send me an email! <br /> I'm open to all opportunities,
+      collaborations, and regular old chats.
+    </p>
 
-  <div class="icon-container">
-    <a
-      href="https://www.linkedin.com/in/sirleoc"
-      target="_blank"
-      rel="noreferrer"
-      class="icon"
-    >
-      <FaLinkedin />
-    </a>
+    <div class="icon-container">
+      <a
+        href="https://www.linkedin.com/in/sirleoc"
+        target="_blank"
+        rel="noreferrer"
+        class="icon"
+      >
+        <FaLinkedin />
+      </a>
 
-    <a
-      href="https://www.github.com/cptleo92"
-      target="_blank"
-      rel="noreferrer"
-      class="icon"
-    >
-      <FaGithubSquare />
-    </a>
+      <a
+        href="https://www.github.com/cptleo92"
+        target="_blank"
+        rel="noreferrer"
+        class="icon"
+      >
+        <FaGithubSquare />
+      </a>
 
-    <a
-      href="https://angel.co/u/leo-cheng-8"
-      target="_blank"
-      rel="noreferrer"
-      class="icon"
-    >
-      <FaAngellist />
-    </a>
+      <a
+        href="https://angel.co/u/leo-cheng-8"
+        target="_blank"
+        rel="noreferrer"
+        class="icon"
+      >
+        <FaAngellist />
+      </a>
 
-    <a href="mailto:leo.cheng92@gmail.com" target="_blank" class="icon">
-      <MdEmail />
-    </a>
+      <a href="mailto:leo.cheng92@gmail.com" target="_blank" class="icon">
+        <MdEmail />
+      </a>
+    </div>
+
+    <button><a href="Leo_Cheng_SE_Resume.pdf">My Resume</a></button>
   </div>
-
-  <button><a href="Leo_Cheng_SE_Resume.pdf">My Resume</a></button>
 </section>
 
 <style>
   section {
     height: 90vh;
   }
+
+  /* .box {
+    width: 60%;
+    margin: auto;
+  } */
 
   .icon-container {
     display: flex;
@@ -69,8 +76,8 @@
 
   .heading {
     padding-top: 4rem;
-    width: 100%;
-    margin: 2rem 0;
+    width: 90%;
+    margin: 4rem 0;
   }
 
   .icon {
@@ -83,8 +90,12 @@
     transition: opacity 0.2s ease-in;
   }
 
+  h3 {
+    color: #9ab4b9;
+  }
+
   p {
-    margin: 0.5rem 1rem 2rem 0;
+    margin: 2rem 1rem 5rem 0;
   }
 
   button {
