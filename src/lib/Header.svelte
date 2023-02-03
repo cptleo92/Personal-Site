@@ -37,9 +37,9 @@
 
 {#if !hideHeader}
   <header class="container" transition:fly={{ y: -50, duration: 400 }}>
-    <button on:click={scrollIntoView} class="header-btn"> Who </button>
-    <button on:click={scrollIntoView} class="header-btn"> What </button>
-    <button on:click={scrollIntoView} class="header-btn "> Where </button>
+    <button on:click={scrollIntoView} class="header-btn"> Me </button>
+    <button on:click={scrollIntoView} class="header-btn"> Work </button>
+    <button on:click={scrollIntoView} class="header-btn "> Contact </button>
     <button class="header-btn resume"
       ><a href="Leo_Cheng_SE_Resume.pdf">Resume</a></button
     >

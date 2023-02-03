@@ -36,7 +36,7 @@
 
 <section class="who">
   <!-- svelte-ignore a11y-click-events-have-key-events -->
-  <div id="Who" class="container" on:click={handleClick}>
+  <div id="Me" class="container" on:click={handleClick}>
     <img class="heading" src="images/who.svg" alt="who am i" />
 
     {#if clicks < 10}
@@ -165,18 +165,18 @@
   }
 
   .slide-1 {
-    transform: translateX(-50%);
-    transition: all 500ms ease-in;
+    transform: translateX(-30%);
+    transition: all 300ms ease-out;
   }
 
   .slide-2 {
-    transform: translateX(50%);
-    transition: all 500ms ease-in 500ms;
+    transform: translateX(30%);
+    transition: all 300ms ease-out 200ms;
   }
 
   .slide-3 {
-    transform: translateX(-50%);
-    transition: all 500ms ease-in 1s;
+    transform: translateX(-30%);
+    transition: all 300ms ease-out 400ms;
   }
 
   @media (min-width: 480px) {

@@ -3,17 +3,41 @@
   import FaLinkedin from "svelte-icons/fa/FaLinkedin.svelte";
   import FaAngellist from "svelte-icons/fa/FaAngellist.svelte";
   import MdEmail from "svelte-icons/md/MdEmail.svelte";
+  import { onMount } from "svelte";
+
+  let transition = false;
+
+  let options = {
+    threshold: 1,
+  };
+
+  onMount(() => {
+    let observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          transition = true;
+          observer.unobserve(entry.target);
+        }
+      });
+    }, options);
+
+    let section = document.querySelector(".box");
+    observer.observe(section);
+  });
 </script>
 
 <section>
   <img
-    id="Where"
+    id="Contact"
     class="heading"
     src="images/where.svg"
     alt="where to find me"
   />
 
-  <div class="box">
+  <div
+    class="box"
+    style={transition && "opacity: 1; transform: translateY(0);"}
+  >
     <h3>Please don't hesitate to reach out!</h3>
     <p>
       Connect with me on LinkedIn or send me an email! <br /> I'm open to all opportunities,
@@ -25,7 +49,8 @@
         href="https://www.linkedin.com/in/sirleoc"
         target="_blank"
         rel="noreferrer"
-        class="icon"
+        class="icon slide-1"
+        style={transition && "opacity: 1; transform: translateY(0);"}
       >
         <FaLinkedin />
       </a>
@@ -34,7 +59,8 @@
         href="https://www.github.com/cptleo92"
         target="_blank"
         rel="noreferrer"
-        class="icon"
+        class="icon slide-2"
+        style={transition && "opacity: 1; transform: translateY(0);"}
       >
         <FaGithubSquare />
       </a>
@@ -43,12 +69,18 @@
         href="https://angel.co/u/leo-cheng-8"
         target="_blank"
         rel="noreferrer"
-        class="icon"
+        class="icon slide-3"
+        style={transition && "opacity: 1; transform: translateY(0);"}
       >
         <FaAngellist />
       </a>
 
-      <a href="mailto:leo.cheng92@gmail.com" target="_blank" class="icon">
+      <a
+        href="mailto:leo.cheng92@gmail.com"
+        target="_blank"
+        class="icon slide-4"
+        style={transition && "opacity: 1; transform: translateY(0);"}
+      >
         <MdEmail />
       </a>
     </div>
@@ -59,13 +91,14 @@
 
 <style>
   section {
-    height: 90vh;
+    height: 100vh;
   }
 
-  /* .box {
-    width: 60%;
-    margin: auto;
-  } */
+  .box {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 300ms ease-out;
+  }
 
   .icon-container {
     display: flex;
@@ -83,6 +116,24 @@
   .icon {
     width: 40px;
     height: 40px;
+    opacity: 0;
+    transform: translateY(50px);
+  }
+
+  .slide-1 {
+    transition: all 300ms ease-out;
+  }
+
+  .slide-2 {
+    transition: all 300ms ease-out 100ms;
+  }
+
+  .slide-3 {
+    transition: all 300ms ease-out 200ms;
+  }
+
+  .slide-4 {
+    transition: all 300ms ease-out 300ms;
   }
 
   .icon:hover {

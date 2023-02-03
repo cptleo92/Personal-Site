@@ -23,8 +23,6 @@
     </div>
   </div>
 
-  <hr />
-
   <div class="icon-container">
     <a href={project.github} class="icon" target="_blank" rel="noreferrer">
       <DiGithubBadge />
@@ -49,7 +47,13 @@
   }
 
   p {
-    margin: 1rem 0;
+    margin: 0.5rem;
+  }
+
+  h3 {
+    color: #9ab4b9;
+    font-weight: 400;
+    text-align: center;
   }
 
   .project-text {
@@ -61,7 +65,7 @@
     display: flex;
     width: 40%;
     margin: auto;
-    padding: 1rem 0 2rem 0;
+    padding: 2rem 0;
     justify-content: space-between;
   }
 
@@ -87,10 +91,6 @@
     background-color: #334044;
   }
 
-  hr {
-    margin: 1rem 3rem;
-  }
-
   ul {
     margin: 0.5rem 0;
     display: flex;
@@ -109,7 +109,7 @@
   @media (min-width: 480px) {
     .tools,
     .project-text {
-      padding: 1rem;
+      padding: 1.2rem;
     }
 
     li {

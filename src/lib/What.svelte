@@ -57,7 +57,7 @@
 </script>
 
 <section>
-  <img id="What" class="heading" src="images/what.svg" alt="what have i done" />
+  <img id="Work" class="heading" src="images/what.svg" alt="what have i done" />
 
   <div class="container-container">
     {#each [projects[current]] as project (current)}
@@ -138,9 +138,9 @@
       top: 335px;
     }
 
-    .projects-container {
-      width: 100%;
-      /* left: 50px; */
+    .container-container {
+      width: 600px;
+      margin: auto;
     }
   }
 </style>
