@@ -9,7 +9,7 @@
     "dev-host": "vite --host",
     "build": "vite build",
     "preview": "vite preview",
-    "deploy": "echo leocheng.dev > dist/CNAME && npx gh-pages -d dist "
+    "deploy": "echo > dist/.nojekyll && echo leocheng.dev > dist/CNAME && npx gh-pages -d dist "
   },
   "devDependencies": {
     "@sveltejs/vite-plugin-svelte": "^2.0.0",
