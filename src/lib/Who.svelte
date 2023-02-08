@@ -1,6 +1,7 @@
 <script>
   import { fade, fly } from "svelte/transition";
   import { onMount } from "svelte";
+  import { cubicOut } from "svelte/easing";
 
   let clicks = 0;
 
@@ -27,11 +28,6 @@
     let section = document.querySelector(".who");
     observer.observe(section);
   });
-
-  let clicked = false;
-  const handleImgClick = () => {
-    clicked = !clicked;
-  };
 </script>
 
 <section class="who">
@@ -72,13 +68,28 @@
     {/if}
   </div>
 
-  <img
+  <!-- <img
     on:click={handleImgClick}
     style={`transform: rotateY(${clicked ? "180deg" : 0});`}
     class="avatar"
     src="images/avatar.jpg"
     alt="avatar"
-  />
+  /> -->
+
+  <figure>
+    <a
+      href="https://www.instagram.com/tattoosintransit/"
+      target="_blank"
+      rel="noreferrer"
+    >
+      <img
+        src="images/Sad_Man_Leo-removebg.png"
+        alt="an accurate portrayal"
+        class="avatar"
+      />
+    </a>
+    <figcaption><em>Designed by @tattoosintransit</em></figcaption>
+  </figure>
 
   <div class="text">
     <p
@@ -133,15 +144,28 @@
     transition: scale 0.2s ease-in-out;
   }
 
+  figure {
+    width: 100%;
+    margin: 1rem 0;
+    text-align: center;
+  }
+
   .avatar {
-    display: block;
-    margin: 2.5rem auto;
     width: 168px;
     height: 168px;
     box-shadow: 1px 1px 8px #000000;
+    border: 3px solid white;
     border-radius: 100%;
     cursor: pointer;
     transition: all 0.5s ease-in;
+    object-fit: cover;
+    object-position: 0 0;
+  }
+
+  figcaption {
+    text-align: center;
+    margin: 1rem 0 2rem 0;
+    font-size: 0.8em;
   }
 
   .avatar:hover {
@@ -178,6 +202,17 @@
     transform: translateX(-30%);
     transition: all 300ms ease-out 400ms;
   }
+
+  /* .sad {
+    display: block;
+    margin: 2rem auto;
+    width: 30vh;
+    height: 30vh;
+    border: 3px solid white;
+    border-radius: 100%;
+    object-fit: cover;
+    object-position: 0 0;
+  } */
 
   @media (min-width: 480px) {
     .avatar {
