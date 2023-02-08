@@ -19,7 +19,7 @@
 
       <img
         in:fly={{
-          x: 200,
+          x: -200,
           duration: 800,
           delay: 3000,
           opacity: 0,
@@ -46,6 +46,10 @@
   section {
     margin: 10rem auto;
     height: 90vh;
+  }
+
+  img {
+    overflow: hidden;
   }
 
   h1 {

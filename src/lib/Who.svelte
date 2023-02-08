@@ -189,17 +189,17 @@
   }
 
   .slide-1 {
-    transform: translateX(-30%);
+    transform: translateX(-10%);
     transition: all 300ms ease-out;
   }
 
   .slide-2 {
-    transform: translateX(30%);
+    transform: translateX(10%);
     transition: all 300ms ease-out 200ms;
   }
 
   .slide-3 {
-    transform: translateX(-30%);
+    transform: translateX(-10%);
     transition: all 300ms ease-out 400ms;
   }
 
@@ -229,6 +229,18 @@
 
     .container {
       padding-bottom: 3rem;
+    }
+
+    .slide-1 {
+      transform: translateX(-30%);
+    }
+
+    .slide-2 {
+      transform: translateX(30%);
+    }
+
+    .slide-3 {
+      transform: translateX(-30%);
     }
   }
 </style>
