@@ -34,7 +34,17 @@
     tools: ["HTML Canvas", "Javascript"],
   };
 
-  let projects = [planpals, meetgreet, jsbilliards];
+  let stickcontrol = {
+    preview: "images/stickcontrol.gif",
+    title: "Interactive Stick Control",
+    description:
+      "Stick Control for the Snare Drummer. A visual practice guide with metronome.",
+    github: "https://github.com/cptleo92/StickControl",
+    live: "https://stick-control.netlify.app/",
+    tools: ["Svelte", "Tailwind", "Netlify", "Vexflow"],
+  }
+
+  let projects = [planpals, meetgreet, stickcontrol, jsbilliards];
   let current = 0;
   let direction;
 

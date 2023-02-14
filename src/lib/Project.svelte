@@ -102,6 +102,10 @@
     font-size: 0.6rem;
   }
 
+  li:nth-child(odd) {
+    color: #c8dee2;
+}
+
   li:not(:first-child) {
     margin-left: 0.7rem;
   }
